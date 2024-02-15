@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="GBAServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GBAServer_jar</output-path>
+    <root id="archive" name="GBAServer.jar">
+      <element id="module-output" name="GBAServer" />
+    </root>
+  </artifact>
+</component>
