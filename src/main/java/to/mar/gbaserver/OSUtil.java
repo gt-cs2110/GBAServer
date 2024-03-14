@@ -3,7 +3,7 @@ package to.mar.gbaserver;
 public class OSUtil {
 
     public enum OS {
-        WINDOWS("mGBA.exe App.gba", " --gdb"), MAC("open -n App.gba -a mGBA.app", " --args --gdb"), LINUX("./mGBA App.gba", " --gdb");
+        WINDOWS("mGBA.exe %s", " --gdb"), MAC("open -n %s -a mGBA.app", " --args --gdb"), LINUX("./mGBA %s", " --gdb");
 
         final String command;
         final String gdbSuffix;

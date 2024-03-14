@@ -19,15 +19,17 @@ public class GBAServer {
                 String command = operatingSystem.command;
 
                 String input = reader.readLine();
+                input = input.substring(13);
 
-                if (input.startsWith("i")) {
+                if (input.endsWith(" GDB")) {
                     command += operatingSystem.gdbSuffix;
+                    input = input.substring(0, input.length() - 4);
                 }
 
                 inputStream.close();
                 client.close();
 
-                Runtime.getRuntime().exec(command);
+                Runtime.getRuntime().exec(String.format(command, input));
             }
 
         } catch (IOException e) {
